@@ -264,10 +264,23 @@
     display: flex; align-items: center; justify-content: center;
     position: relative; overflow: hidden;
   }
-  .merch-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, var(--pink-dim), transparent 70%); }
-  .merch-placeholder { text-align: center; position: relative; }
-  .merch-placeholder-word { font-family: 'Bebas Neue', sans-serif; font-size: 52px; letter-spacing: 8px; color: rgba(255,255,255,0.06); line-height: 1; display: block; }
-  .merch-placeholder-sub { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #2a2a2a; margin-top: 16px; }
+  . /* MERCH */
+  .merch { padding: 96px 52px; border-bottom: 1px solid var(--border); }
+  .merch-layout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+    align-items: center; max-width: 900px; margin: 0 auto;
+  }
+  .merch-visual {
+    aspect-ratio: 1; background: #0e0e0e;
+    border: 1px solid var(--border-soft);
+    position: relative; overflow: hidden;
+  }
+  .merch-visual img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: contain; object-position: center;
+    display: block;
+  }
   .merch-text p { font-size: 15px; color: var(--grey-mid); line-height: 1.85; margin-bottom: 24px; }
   .merch-price { font-family: 'Bebas Neue', sans-serif; font-size: 40px; color: var(--pink); letter-spacing: 2px; margin-bottom: 20px; }
 
